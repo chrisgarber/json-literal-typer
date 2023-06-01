@@ -320,7 +320,7 @@ function typifyArray({ thing, nodes, ids, config }: TypifyArrayArgs) {
     values.count === 0
       ? 'never[]'
       : values.count === 1
-      ? `${values.value}[]`
+      ? `[${values.value}]`
       : `(${values.value})[]`;
 
   if (!forceType) {
